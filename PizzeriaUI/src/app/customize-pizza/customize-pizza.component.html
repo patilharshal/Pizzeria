@@ -1,0 +1,87 @@
+<div class="ownpizza container mx-auto flex flex-wrap p-5 flex-col">
+
+  <div>
+    <h3>Order Summary</h3>
+    <mat-label class="summary">Item : {{ menuItem.ItemName }}</mat-label>
+    <mat-label class="summary">Current Price : <i>{{ currentPrice | currency }}</i></mat-label>
+  </div>
+  <br />
+  <mat-horizontal-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="crustFormGroup">
+      <form [formGroup]="crustFormGroup">
+        <ng-template matStepLabel>Select crust size</ng-template>
+        <mat-form-field>
+          <mat-label>Choose one</mat-label>
+          <mat-select formControlName="crustCtrl" (selectionChange)="selectCrust($event)">
+            <mat-option value="small">Small</mat-option>
+            <mat-option value="medium">Medium</mat-option>
+            <mat-option value="large">Large</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="sauceFormGroup">
+      <form [formGroup]="sauceFormGroup">
+        <ng-template matStepLabel>Select sauce</ng-template>
+        <mat-form-field>
+          <mat-label>Choose one</mat-label>
+          <mat-select formControlName="sauceCtrl" (selectionChange)="selectSauce($event)">
+            <mat-option value="marinara">Marinara</mat-option>
+            <mat-option value="cheese">Cheese</mat-option>
+            <mat-option value="ranch">Ranch</mat-option>
+            <mat-option value="tomato">Tomato</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="cheeseFormGroup">
+      <form [formGroup]="cheeseFormGroup">
+        <ng-template matStepLabel>Extra cheese</ng-template>
+        <!-- <mat-form-field> -->
+        <mat-checkbox formControlName="cheeseCtrl" (change)="selectExtraCheese($event)">Extra Cheese</mat-checkbox>
+        <!-- </mat-form-field> -->
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="toppingsFormGroup">
+      <form [formGroup]="toppingsFormGroup">
+        <ng-template matStepLabel>Select your toppings</ng-template>
+        <mat-checkbox formControlName="pepperoni" (change)="selectToppings($event)">Pepperoni</mat-checkbox>
+        <mat-checkbox formControlName="mushrooms" (change)="selectToppings($event)">Mushrooms</mat-checkbox>
+        <mat-checkbox formControlName="sausage" (change)="selectToppings($event)">Sausage</mat-checkbox>
+        <mat-checkbox formControlName="blackOlives" (change)="selectToppings($event)">Black olives</mat-checkbox>
+        <mat-checkbox formControlName="paneer" (change)="selectToppings($event)">Paneer</mat-checkbox>
+        <mat-checkbox formControlName="goldenCorn" (change)="selectToppings($event)">Golden Corn</mat-checkbox>
+        <mat-checkbox formControlName="jalapeno" (change)="selectToppings($event)">Jalapeno</mat-checkbox>
+        <mat-checkbox formControlName="greenPeppers" (change)="selectToppings($event)">Green peppers</mat-checkbox>
+        <mat-checkbox formControlName="redPeppers" (change)="selectToppings($event)">Red peppers</mat-checkbox>
+        <mat-checkbox formControlName="babycorn" (change)="selectToppings($event)">Babycorn</mat-checkbox>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>Please place your order.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button class="reset" (click)="stepper.reset(); resetItems()">Reset</button>
+        <button mat-button class="place-order" (click)="placeOrder()">Place Order</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+
+  <mat-label *ngIf="orderId">Order {{orderId}} placed successfully.</mat-label>
+</div>

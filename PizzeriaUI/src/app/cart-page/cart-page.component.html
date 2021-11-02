@@ -1,0 +1,49 @@
+<div *ngIf="!cart || cart.items.length == 0" class="container">
+  Cart is empty
+</div>
+
+<div *ngIf="cart && cart.items.length >0" class="container">
+  <ul>
+      <li *ngFor="let cartItem of cart.items">
+          <div>
+              <img [src]="cartItem.menuItem.ImageUrl" [alt]="cartItem.menuItem.ItemName">
+          </div>
+          <div>
+                {{cartItem.menuItem.ItemName}}
+          </div>
+          <div>
+            Quantity:
+              <select #quantitySelect (change)="changeQuantity(cartItem,quantitySelect.value)">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+              </select>
+          </div>
+
+          <div>
+              {{cartItem.price | currency}}
+          </div>
+
+          <div>
+              <button class="remove-button" (click)="removeFromCart(cartItem)">
+                  Remove
+              </button>
+          </div>
+      </li>
+  </ul>
+  <div class="checkout">
+    <h3>Order Summary</h3>
+    <mat-label class="summary">Item : {{cart.items.length}}</mat-label>
+    <mat-label class="summary">Current Price : <i>{{cart.totalPrice | currency}}</i></mat-label>
+
+    <div>
+      <button mat-button class="placeorder" (click)="placeOrder()">
+        Place Order
+      </button>
+    </div>
+    <mat-label *ngIf="orderId">Order {{orderId}} placed successfully.</mat-label>
+  </div>
+
+</div>

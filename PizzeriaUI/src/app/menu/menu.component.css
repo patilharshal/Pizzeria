@@ -1,0 +1,54 @@
+/* .customize {
+    color: blueviolet;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.customize:hover {
+    text-decoration: none;
+} */
+
+.container .ingrediants{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.container .ingrediants > span{
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    margin: .5rem .5rem .5rem 0;
+    border-radius: 1.5rem;
+    background-color: aliceblue;
+}
+.container button.addtocart{
+  color: white;
+  background: #e72929;
+  border: none;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 5rem;
+  outline: none;
+  margin-right: 0.2rem;
+}
+
+.container button.addtocart:hover{
+  opacity: .9;
+  cursor: pointer;
+}
+
+.container button.customize{
+  color: white;
+  background: blueviolet;
+  border: none;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 5rem;
+  outline: none;
+  margin-right: 0.2rem;
+}
+
+.container button.customize:hover{
+  opacity: .9;
+  cursor: pointer;
+}

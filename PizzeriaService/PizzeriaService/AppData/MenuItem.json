@@ -1,0 +1,125 @@
+[
+  {
+    "Id": 1,
+    "ItemName": "Margherita",
+    "Description": null,
+    "ImageUrl": "/assets/images/Margherit.jpg",
+    "Price": 200,
+    "Ingrediants": [
+      "Mozzarella",
+      "Olive Oil",
+      "Basil",
+      "Vegetables"
+    ],
+    "IsPizzaItem": true
+  },
+  {
+    "Id": 2,
+    "ItemName": "Farm House",
+    "Description": null,
+    "ImageUrl": "/assets/images/Farmhouse.jpg",
+    "Price": 400,
+    "Ingrediants": [
+      "Cheese",
+      "Vegetables",
+      "Oil"
+    ],
+    "IsPizzaItem": true
+  },
+  {
+    "Id": 3,
+    "ItemName": "Cheese N Corn",
+    "Description": null,
+    "ImageUrl": "/assets/images/Corn_Cheese.jpg",
+    "Price": 200,
+    "Ingrediants": [
+      "Cheese",
+      "Corn",
+      "Oil",
+      "Corn Flour"
+    ],
+    "IsPizzaItem": true
+  },
+  {
+    "Id": 4,
+    "ItemName": "Veggie Paradise",
+    "Description": null,
+    "ImageUrl": "/assets/images/Veggie_Paradise.jpg",
+    "Price": 400,
+    "Ingrediants": [
+      "Vegitables",
+      "Cheese",
+      "Oil",
+      "Corn Flour"
+    ],
+    "IsPizzaItem": true
+  },
+  {
+    "Id": 5,
+    "ItemName": "Veg Extravaganza",
+    "Description": null,
+    "ImageUrl": "/assets/images/Veg_Extravaganz.jpg",
+    "Price": 300,
+    "Ingrediants": [
+      "Mozzarella",
+      "Olive Oil",
+      "Basil",
+      "Vegetables"
+    ],
+    "IsPizzaItem": true
+  },
+  {
+    "Id": 6,
+    "ItemName": "Peppy Paneer",
+    "Description": null,
+    "ImageUrl": "/assets/images/Peppy_Paneer.jpg",
+    "Price": 200,
+    "Ingrediants": [
+      "Paneer",
+      "Olive Oil",
+      "Basil",
+      "Vegetables"
+    ],
+    "IsPizzaItem": true
+  },
+  {
+    "Id": 7,
+    "ItemName": "Mexican Green Wave",
+    "Description": null,
+    "ImageUrl": "/assets/images/Mexican_Green_Wave.jpg",
+    "Price": 300,
+    "Ingrediants": [
+      "Mexican Olive",
+      "Sauces",
+      "Basil",
+      "Vegetables"
+    ],
+    "IsPizzaItem": true
+  },
+  {
+    "Id": 8,
+    "ItemName": "Mousse Cake",
+    "Description": null,
+    "ImageUrl": "/assets/images/Cake.jpg",
+    "Price": 200,
+    "Ingrediants": [
+      "Milk",
+      "Cream",
+      "Chocolate"
+    ],
+    "IsPizzaItem": false
+  },
+  {
+    "Id": 9,
+    "ItemName": "Stuffed Garlic Bread",
+    "Description": null,
+    "ImageUrl": "/assets/images/stuffed-garlic-breadstick.jpg",
+    "Price": 200,
+    "Ingrediants": [
+      "Garlic",
+      "Cheese",
+      "Flaour"
+    ],
+    "IsPizzaItem": false
+  }
+]

@@ -1,0 +1,50 @@
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-form-field {
+  margin-top: 16px;
+}
+
+.reset {
+  background-color: red !important;
+}
+
+.place-order {
+  background-color: blueviolet !important;
+  color: white;
+}
+
+.summary {
+    display: block;
+}
+
+.summary i {
+    color: red !important;
+}
+
+.ownpizza button {
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none;
+  vertical-align: baseline;
+  text-align: center;
+  margin-right: 16px;
+  min-width: 64px;
+  line-height: 36px;
+  padding: 0 16px;
+  border-radius: 4px;
+  overflow: visible;
+  margin-top: 16px;
+  background-color: lightgrey;
+}
+
+.ownpizza button:hover {
+  background-color: lightskyblue;
+}
+
+mat-checkbox {
+  margin-right: 16px;
+  display: block;
+}
+

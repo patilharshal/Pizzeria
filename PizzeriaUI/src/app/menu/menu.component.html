@@ -1,0 +1,22 @@
+<section class="text-gray-600 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-wrap -m-4">
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full" *ngFor ="let menuItem of menuItems">
+          <a class="block relative h-80 rounded overflow-hidden">
+            <img alt="ecommerce" class="object-cover object-center w-full h-full block" [src]="menuItem.ImageUrl">
+          </a>
+          <div class="mt-4">
+            <h2 class="text-gray-900 title-font text-lg font-medium">{{menuItem.ItemName}}</h2>
+            <p class="mt-1">{{menuItem.Price | currency}}</p>
+            <div class="ingrediants">
+                <span *ngFor="let ingrediants of menuItem.Ingrediants">
+                    {{ingrediants}}
+                </span>
+            </div>
+            <button (click)="addToCart(menuItem)" class="addtocart">Add To Cart</button>
+            <button *ngIf="menuItem.IsPizzaItem" (click)="customize(menuItem, 1)" class="customize">Build Your Pizza</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
